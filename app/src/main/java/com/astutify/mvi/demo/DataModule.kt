@@ -1,6 +1,9 @@
 package com.astutify.mvi.demo
 
 import com.astutify.mvi.demo.data.DevicesApi
+import com.astutify.mvi.demo.data.IngredientDataRepository
+import com.astutify.mvi.demo.data.IngredientsApiRepository
+import com.astutify.mvi.demo.domain.IngredientRepository
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import dagger.Module
@@ -12,6 +15,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.Date
 import java.util.concurrent.TimeUnit
+import javax.inject.Singleton
 
 @Module
 class DataModule {
@@ -48,4 +52,19 @@ class DataModule {
     fun providesDeviceApi(retrofit: Retrofit): DevicesApi {
         return retrofit.create(DevicesApi::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun providesSearchRepository(
+        ingredientsApiRepository: IngredientsApiRepository
+    ): IngredientRepository {
+        return IngredientDataRepository(
+            ingredientsApiRepository
+        )
+    }
+
+    @Provides
+    fun providesIngredientsApiRepository(
+        api: DevicesApi
+    ) = IngredientsApiRepository(api)
 }
