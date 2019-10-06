@@ -1,5 +1,6 @@
 package com.astutify.mvi.demo
 
+import com.astutify.mvi.demo.data.DevicesApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import dagger.Module
@@ -41,5 +42,10 @@ class DataModule {
         return retrofitBuilder
             .client(okHttpClient)
             .build()
+    }
+
+    @Provides
+    fun providesDeviceApi(retrofit: Retrofit): DevicesApi {
+        return retrofit.create(DevicesApi::class.java)
     }
 }
