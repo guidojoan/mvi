@@ -12,6 +12,9 @@ class Navigator (
     fun goToAddIngredient(ingredient: IngredientViewModel? = null) {
     }
 
+    fun finishAddIngredient(ingredient: IngredientViewModel) {
+    }
+
     fun goBack() {
         activity.finish()
     }
