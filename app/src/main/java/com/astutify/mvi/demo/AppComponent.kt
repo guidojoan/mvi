@@ -1,5 +1,6 @@
 package com.astutify.mvi.demo
 
+import com.astutify.mvi.demo.presentation.screen.ingredients.di.IngredientsViewComponent
 import dagger.Component
 import javax.inject.Singleton
 
@@ -12,4 +13,6 @@ interface AppComponent {
 
         fun build(): AppComponent
     }
+
+    fun ingredientsViewBuilder(): IngredientsViewComponent.Builder
 }

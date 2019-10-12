@@ -8,4 +8,11 @@
     <color name="statusBarBackground">@color/colorBackground</color>
     <color name="colorBackground">#121212</color>
 
+    <color name="orange">#e57373</color>
+
+    <color name="firstLetterColor">#000000</color>
+    <color name="black">#000000</color>
+    <color name="grey">#3E3E3E</color>
+    <color name="white">#ffffff</color>
+
 </resources>
