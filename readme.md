@@ -2,7 +2,9 @@
 
 This is a library to create screens following the MVI architecture. To understand this architecture you have a plenty of articles. I recommend you to read the following links to understand this architecture.
 
+http://hannesdorfmann.com/android/mosby3-mvi-1
 
+https://www.raywenderlich.com/817602-mvi-architecture-for-android-tutorial-getting-started
 
 ## Core concepts about MVI library
 
@@ -371,19 +373,10 @@ fun clickSave() {
 
 ## Setup the MVI library
 
-##### With Maven
-
-`<!-- https://mvnrepository.com/artifact/com.astutify.mvi/mvi -->`
-`<dependency>`
-    `<groupId>com.astutify.mvi</groupId>`
-    `<artifactId>mvi</artifactId>`
-    `<version>0.2.0</version>`
-`</dependency>`
 
 
-
-##### With Gradle
+##### With Gradle -> Jcenter
 
 ```kotlin
-implementation 'com.astutify.mvi:mvi:0.2.0'
+implementation 'com.astutify.mvi:core:1.0.0'
 ```

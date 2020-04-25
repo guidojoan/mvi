@@ -16,6 +16,11 @@ buildscript {
     }
 }
 
+plugins {
+    id "com.jfrog.bintray" version "1.8.5"
+    id "maven-publish"
+}
+
 allprojects {
     repositories {
         google()
@@ -33,5 +38,5 @@ ext {
     minSdkVersion = 21
     targetSdkVersion = 29
     versionCode = 1
-    versionName = "1.0"
+    sdkVersion = "1.0.0"
 }

@@ -25,7 +25,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
+        versionName rootProject.ext.sdkVersion
 
         testInstrumentationRunner "com.astutify.mvi.demo.ingredient.MockAndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
